@@ -80,7 +80,7 @@ data_base = [
 ]
 
 #Add new good
-max = int(input('type number of adding goods: '))
+max = int(input('type number adding goods: '))
 for i in range(1, max + 1):
 	name = input(f'Type name of good #{i}: ')
 	price = int(input(f'Type price of good #{i}: '))
@@ -90,8 +90,8 @@ for i in range(1, max + 1):
 	data_base.append((len(data_base) + 1, {'название': name, "цена" : price, 'количество' : numb, 'eд' : unit} ))
 	print('adding good complete')
 
-for i in data_base:
-	print(i)
+#for i in data_base:				
+#	print(i)
 
 output_base = {}
 keys = data_base[1][1].keys()		# receive all keys
