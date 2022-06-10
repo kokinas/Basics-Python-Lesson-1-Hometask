@@ -1,6 +1,6 @@
 #Home task Basics python
 ###Lesson #3 FUNCTION
-'''
+
 #Task #3.1 divide function
 def divide(divident, divisor):
 	"""
@@ -94,6 +94,59 @@ def exp2(x, y):
 	return result
 
 print (exp2(4, -4))
-'''
 
-#Task #3.5
+
+#Task #3.5 sum typed number
+def sum():
+	"""
+	return sum typed number, symbol q is quit cycle
+
+	(None) -> number
+
+	>>>sum('7 8 5')
+	20
+	"""
+	result = 0
+	while (1): 
+		input_str = input ('Type list of number: ')
+		for i in input_str.split():
+			if i != 'q':
+				result = result + int(i)
+			else:
+				return result
+		print(f'sum number: {result}')
+print(f'Total sum:{sum()}')
+
+#Task #3.6 first word UpperCase 
+def int_func(string):
+	"""
+	change the first symbol of sentence to uppercase
+
+	(string) -> string
+
+	int_func("hello, how are you my friend?")
+	Hello, how are you my friend?
+	"""
+	if string.istitle:
+		return string.capitalize()
+	else:
+		return "input sentens has upper case"
+
+print(int_func("hello, how are you my friend?"))
+
+#Task #3.7 all words UpperCase 
+def int_func2(string):
+	"""
+	change the first symbol of every word in sentence to uppercase
+
+	(string) -> string
+
+	int_func("hello, how are you my friend?")
+	Hello, how are you my friend?
+	"""
+	result = []
+	for word in string.split():
+		result.append(int_func(word))
+	return " ".join(result)
+print(int_func2("hello, how are you my friend?"))
+
